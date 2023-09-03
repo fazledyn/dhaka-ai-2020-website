@@ -1,0 +1,64 @@
+<html lang="en">
+
+<style>
+    .header {
+        background-color: #54007a;
+        color: white;
+        font-size: 30px;
+        font-weight: normal;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        align-content: space-around;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content {
+        background-color: whitesmoke;
+        color: #242424;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+    .footer {
+        background-color: #54007a;
+        color: #ffffffc4;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+<head>
+    {% block head %}
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://dhaka-ai.com/static/images/logo.png" width="auto" height="50px" >
+        <div style="margin-left: auto; margin-right: 5px;">
+            {% block heading %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+
+        <p>
+            For any queries, feel free to knock us at: <a href="mailto: dhaka.ai.bd@gmail.com">dhaka.ai.bd@gmail.com</a>
+        </p>
+    </div>
+
+    <div class="footer">
+        {% block footer %}
+        &copy; Copyright 2020 by Dhaka-AI.
+        {% endblock %}
+    </div>
+</body>
+
+</html>

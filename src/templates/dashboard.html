@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dashboard - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Dashboard
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+
+        <div class="container">
+
+            {% include 'base/messages.html' %}
+
+
+            {% if user_type == 'admin'%}
+            <h3 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                Pending team registration
+            </h3>
+
+            <table class="table"
+                style="border-collapse: collapse; border-radius: 7px 7px 7px 7px; overflow: hidden; background-color: whitesmoke;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Team Info.</th>
+                        <th>Approve?</th>
+                    </tr>
+                </thead>
+                {% for r in result %}
+                <tr>
+                    <td>{{ r[0] }}</td>
+                    <td><a href="/team-details/{{r[0]}}" target="_blank">Click Here</a></td>
+                    <td><a href="/approve/{{r[0]}}"><b>Approve</b></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+
+            <!-- 
+                For Teams Dashboard
+            -->
+
+            {% if user_type == 'team' %}
+            <h3 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                Team {{team}} details:
+            </h3>
+
+            <table class="table"
+                style="border-collapse: collapse; border-radius: 7px 7px 7px 7px; overflow: hidden; background-color: whitesmoke;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Member's Name</th>
+                        <th>Contact No.</th>
+                        <th>Institution</th>
+                    </tr>
+                </thead>
+
+                {% for row in team_info %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <br><br>
+
+            <h3 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                Submissions by Team {{team}}:
+            </h3>
+            <h5 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                Total submission for today {{daily_limit}}/10 times
+            </h5>
+
+
+            <table class="table"
+                style="border-collapse: collapse; border-radius: 7px 7px 7px 7px; overflow: hidden; background-color: whitesmoke;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No.</th>
+                        <th>Time Stamp</th>
+                        <th>File Name</th>
+                        <th>Accuracy</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                {% for row in submissions %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[5] }}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+            {% endif %}
+
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Submission - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Submission status
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            
+            {% include 'base/messages.html' %}
+
+            {% if attempts == 5 %}
+            <h2 style="text-transform: uppercase; text-align: center; font-weight: 900;">Daily attempts exceeded</h2>
+            {% else %}
+            <h3 style="text-align: center; padding-bottom: 5px; color: seagreen; font-weight: 800;">
+                Success !
+            </h3>
+            <h4 style="text-align: center; padding-bottom: 5px;">
+                Accuracy: {{ accuracy }}%
+            </h4>
+            <h4 style="text-align: center; padding-bottom: 5px;">
+                Attempts left: {{5 - attempts }}
+            </h4>
+            {% endif %}
+
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

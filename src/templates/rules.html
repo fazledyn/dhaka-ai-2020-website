@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+      <title>Rules - Dhaka AI 2020</title>
+      {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+      <!-- Navbar -->
+      {% include 'base/navbar.html' %}
+      <div
+            style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+            <div class="container">
+                  <div class="text" style="width: 400px;">
+                        <h3
+                              style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                              Rules
+                        </h3>
+                  </div>
+            </div>
+      </div>
+
+      <section class="ftco-section ftco-portfolio bg-light">
+            <div class="container">
+                  <div class="row no-gutters">
+                        <div class="col-md-12 portfolio-wrap mt-0">
+                              <div class="row no-gutters align-items-center">
+                                    <div class="col-md-7">
+                                          <div class="desc">
+                                                <div class="top">
+                                                      <h1 class="mb-2">Announcement</h1>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <h3 style="font-weight: bold;">Deadlines:</h3>
+                                          <ul>
+                                                <li><b>Poster Submission Deadline: </b>13th December, 2020</li>
+                                                <li><b>Round 2 Result (Selection of top 5): 14th December, 2020</b></li>
+                                                <li><b>Final Presentation (Top 5): </b>15th December, 2020 | 6.00 PM -
+                                                      9.00 PM (A zoom meeting link will be sent to the top 5 teams)</li>
+                                          </ul>
+                                    </div>
+                                    <div>
+                                          <h3 style="font-weight: bold;">Poster Submission:</h3>
+                                          <p>
+                                                For poster submission, teams can choose any tools to create the poster.
+                                                Your poster can be in jpg or pdf format. You will be happy to know that
+                                                we decided to publish all the teams' posters on the Dhaka-AI website.
+                                          </p>
+
+                                          <h3 style="font-weight: bold;">Round 2 Results:</h3>
+                                          <p>
+                                                Our judge panel will decide the top 5 teams for the final presentation
+                                                based on inference score and poster about your approach.
+                                          </p>
+
+                                          <h3 style="font-weight: bold;">Final Presentation:</h3>
+                                          <p>
+                                                In the final defense, the selected top 5 teams need to present their
+                                                work in front of the Judge panels. For each team, the total duration of
+                                                the final presentation is <b>30 min (15 min of a presentation about your
+                                                approach and 15 min of a Q/A session).</b> Any member of the team can
+                                                present your work. However, we request all the team members to present
+                                                in the zoom session during the final defense. As the preparation time
+                                                for the final presentation is quite limited, we suggest all the teams
+                                                prepare a PowerPoint presentation during these periods.
+                                          </p>
+
+                                    </div>
+                              </div>
+                        </div>
+
+
+                        <div class="col-md-12 portfolio-wrap mt-0">
+                              <div class="row no-gutters align-items-center">
+                                    <div class="col-md-7">
+                                          <div class="desc">
+                                                <div class="top">
+                                                      <h1 class="mb-2">How to participate?</h1>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <ul>
+                                                <li>
+                                                      Register at the <a href="https://www.dhaka-ai.com/register/"
+                                                            target="_blank">dhaka-ai.com</a>
+                                                      portal, this
+                                                      will allows you to access the <a
+                                                            href="https://doi.org/10.7910/DVN/POREXF"
+                                                            target="_blank">downloads</a>
+                                                </li>
+                                                <li>
+                                                      There can be 1-5 members in a team. A person can not be in more
+                                                      than one team.
+                                                </li>
+                                                <li>
+                                                      Once registered, you can not change your team or any information
+                                                      provided. So, be sure before your registration
+                                                </li>
+                                                <li>
+                                                      Download the training datasets and adapt your method(s) to
+                                                      input/output file formats
+                                                </li>
+                                                <li>
+                                                      Run your method on the test dataset and submit the results
+                                                </li>
+                                                <li>
+                                                      You can submit your dataset maximum <b>10</b> times a day.
+                                                      Incorrect submissions (accuracy = -1) won't be counted.
+                                                </li>
+                                                <li>Forum: <a href="https://www.facebook.com/groups/dhakaai"
+                                                            target="_blank">www.facebook.com/groups/dhakaai</a></li>
+                                                <b>*Please remember to cite the dataset if you use it for any future
+                                                      publications*</b>
+                                          </ul>
+                                          <b>Participation fee:</b> Free for all (maximum 5 persons per team)<br>
+                                          <b>Prizes and Awards:</b><br>
+                                          <ul>
+                                                <li>
+                                                      The winning team gets a prize of 1,00,000 BDT
+                                                </li>
+                                                <li>
+                                                      STI 2020 conference participation (virtual) for top 10 teams <br>
+                                                      <a href="http://fse.green.edu.bd/sti-2020/"
+                                                            target="_blank">http://fse.green.edu.bd/sti-2020/</a>
+                                                </li>
+                                          </ul>
+                                          <b>Hosted by: </b>Faculty of Science and Engineering, GUB<br>
+                                          <b>Co-Host: </b>IEEE computer society, Bangladesh Chapter<br>
+                                          <b>Sponsored by: </b>Artificial Intelligence Journal (AIJ), Elsevier, STI
+                                          2020<br>
+                                    </div>
+                              </div>
+                        </div>
+
+
+                        <div class="col-md-12 portfolio-wrap">
+                              <div class="row no-gutters align-items-center">
+                                    <div class="col-md-7">
+                                          <div class="desc">
+                                                <div class="top">
+                                                      <h1 class="mb-2">Points Distribution</h1>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <b>1st Round:</b>
+                                          <p>
+                                                Only the top 30% teams from the leaderboard will clear <b>Round 1</b>
+                                                based on detection accuracy (test dataset 1)
+                                          </p>
+
+                                          <b>2nd Round: Only for Top 30% teams</b>
+                                          <p>
+                                                70% - Detection accuracy (test dataset 2) <br>
+                                                15% - Poster (Visual clarity, scientific soundness, innovation,
+                                                novelity) <br>
+                                                15% - Presentation (Presentation skill, teamwork, arguments, future
+                                                directions, question
+                                                answers)
+                                          <p>
+                                                Code will be checked for the winning team (Code quality and
+                                                reproducibility of the
+                                                model is important. If failed at this level, the prize will be moved to
+                                                the next
+                                                deserving team)
+                                          </p>
+                                          </p>
+
+                                          <b>Dataset:</b>
+
+                                          <div style="display:flex; flex-direction: column;">
+                                                <p>
+                                                      The dataset is composed of vehicle images, where an image contains
+                                                      a vehicle of one
+                                                      or
+                                                      more of 21 different classes of vehicle. This makes the dataset
+                                                      useful for multiple
+                                                      vehicle detection and recognition. The considered vehicle classes
+                                                      are: ambulance,
+                                                      auto-rickshaw, bicycle, bus, car, garbage van, human hauler,
+                                                      minibus, minivan,
+                                                      motorbike, Pickup, army vehicle, police car, rickshaw, scooter,
+                                                      Suv, taxi,
+                                                      three-wheelers (CNG), truck, van, wheelbarrow.
+                                                      <br><br>
+
+                                                      <b>Training Set and Test Set 1: </b> <a
+                                                            href="https://doi.org/10.7910/DVN/POREXF"
+                                                            target="_blank">https://doi.org/10.7910/DVN/POREXF</a>
+                                                      <br>
+                                                      <b>Training Set and Test Set 2: </b> <a
+                                                            href="https://www.kaggle.com/rifat963/dhakaai-dhaka-based-traffic-detection-dataset"
+                                                            target="_blank">https://www.kaggle.com/rifat963/dhakaai-dhaka-based-traffic-detection-dataset</a>
+                                                      <br><br>
+
+                                                      <b>Sample Solution: </b><br>
+                                                      <a href="https://colab.research.google.com/drive/1x2NZUVJtVqmeSFpBO_XNmv2esMrHPGQ7"
+                                                            target="_blank">Here</a>
+                                                      is a sample solution provided for a quick start. The submission
+                                                      format is described
+                                                      in details in a separate page. Also from the sample solution you
+                                                      may check out the
+                                                      code snippet for submission file structure.
+                                                </p>
+
+                                                <div>
+                                                      <img src="{{ url_for('static', filename='images/dataset-top.jpg') }}"
+                                                            style="width: auto; height: 360px;" align="left">
+                                                </div>
+
+                                                <div>
+                                                      <img src="{{ url_for('static', filename='images/dataset-bottom.jpg') }}"
+                                                            style="width: auto; height: 360px;" align="left">
+                                                </div>
+
+                                          </div>
+
+                                    </div>
+                              </div>
+                        </div>
+
+
+                        <div class="col-md-12 portfolio-wrap">
+                              <div class="row no-gutters align-items-center">
+                                    <div class="col-md-7">
+                                          <div class="desc">
+                                                <div class="top">
+                                                      <h1 class="mb-2">Important Dates</h1>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div>
+
+                                          <ul>
+                                                <li>
+                                                      <b>Registration starts: </b>1st of October, 2020
+                                                </li>
+                                                <li>
+                                                      <b>Dataset (training set with annotation, test set 1) release:
+                                                      </b>1st October, 2020
+                                                </li>
+                                                <li>
+                                                      <b>End of round 1: </b>30th November, 2020
+                                                </li>
+                                                <li>
+                                                      <b>Release of round 1 result: </b>30th November, 2020 Midnight
+                                                      (30% of the team will go through to round 2)
+                                                </li>
+                                                <li>
+                                                      <b>Dataset (test set 2) release: </b>1st of December, 2020
+                                                </li>
+                                                <li>
+                                                      <b>End of round 2: </b>7th December, 2020
+                                                </li>
+                                                <li>
+                                                      <b>Release of round 2 result: </b>7th December, 2020 Midnight (Top
+                                                      5 teams from the leaderboard will clear round 2)
+                                                </li>
+                                                <li>
+                                                      <b>Last date for code submission Github (private): </b>8th
+                                                      December, 2020 (Only for top 5 teams of round 2)
+                                                </li>
+                                                <li>
+                                                      <b>Last date for poster: </b>10th December, 2020 (Only for top 5
+                                                      teams of round 2)
+                                                </li>
+                                                <li>
+                                                      <b>Final presentation (online): </b>11th December, 2020 (schedule
+                                                      will be provided)
+                                                </li>
+                                                <li>
+                                                      <b>The award ceremony and final result release: </b>19th December
+                                                      2020 (Winner takes
+                                                      all) (based on detection performance, scientific soundness, and
+                                                      novelty, quality of codes)
+                                                </li>
+                                          </ul>
+
+                                          <p>
+                                                <b>Top 10 team of round 2 will get certificates and invitation to join
+                                                      the sessions of STI2020</b>
+                                          </p>
+
+                                    </div>
+                              </div>
+                        </div>
+
+
+                        <div class="col-md-12 portfolio-wrap">
+                              <div class="row no-gutters align-items-center">
+                                    <div class="col-md-7">
+                                          <div class="desc">
+                                                <div class="top">
+                                                      <h1 class="mb-2">FAQ</h1>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div>
+                                          <ul>
+                                                <li>
+                                                      <b>
+                                                            What is this Program all about?
+                                                      </b>
+                                                      <p>
+                                                            The scenario of Dhaka traffic is unique which poses complex
+                                                            new challenges in
+                                                            terms of automated traffic detection. To solve this problem
+                                                            using advances in
+                                                            AI-based technology and ICT solutions, we are calling for
+                                                            solutions to automatic
+                                                            Dhaka traffic detection problems on optical images.
+                                                      </p>
+                                                </li>
+                                                <li>
+                                                      <b>
+                                                            Why AI?
+                                                      </b>
+                                                      <p>
+                                                            Primary benefit of AI (Artificial Intelligence) is to
+                                                            analyze much more data
+                                                            than a human could. It can also dive deeper into the data
+                                                            with much more
+                                                            accuracy than a person, which makes AI a powerful tool for
+                                                            us to use as we make
+                                                            decisions about our daily lives.
+                                                      </p>
+                                                </li>
+                                                <li>
+                                                      <b>
+                                                            How its gonna effect on my personal life?
+                                                      </b>
+                                                      <p>
+                                                            The impact of artificial intelligence will be greater and it
+                                                            will likely change
+                                                            or disrupt just about everything we experience in our lives
+                                                            and in society as a
+                                                            whole. This will have a positive impact in many ways,
+                                                            creating opportunities for
+                                                            those who are early to adopt new tools and follow trends as
+                                                            changes happen, but
+                                                            it will also be stressful, disappointing, and confusing for
+                                                            people who ignore or
+                                                            aren’t fully prepared for the changes that AI will bring.
+                                                      </p>
+                                                </li>
+                                                <li>
+                                                      <b>
+                                                            How to cite the dataset?
+                                                      </b>
+                                                      <p>
+                                                            Please cite the dataset using the following text or you may
+                                                            check the following
+                                                            link.
+                                                            <br>
+                                                            <b>
+                                                                  Shihavuddin, ASM; Mohammad Rifat Ahmmad Rashid, 2020,
+                                                                  "DhakaAI",
+                                                                  https://doi.org/10.7910/DVN/POREXF, Harvard Dataverse,
+                                                                  V1
+                                                            </b>
+                                                            <br>
+                                                            <a href="https://doi.org/10.7910/DVN/POREXF"
+                                                                  target="_blank">https://doi.org/10.7910/DVN/POREXF</a>
+                                                      </p>
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+            </div>
+      </section>
+
+      {% include 'base/footer.html' %}
+
+</body>
+
+</html>

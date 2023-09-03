@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Register - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<script>
+
+    function checkFormSubmission() {
+
+        if(document.getElementById("teamname").value == "") {
+            alert("Enter team name !");
+            return false;
+
+        } else if(document.getElementById("email").value == "") {
+            alert("Enter email !");
+            return false;
+
+        } else if(document.getElementById("password").value == "") {
+            alert("Enter password !");
+            return false;
+
+        } else if(document.getElementById("re-password").value == "") {
+            alert("Enter confirm password !");
+            return false;
+
+        } else if(document.getElementById("name1").value == "") {
+            alert("Enter team leader's name !");
+            return false;
+
+        } else if(document.getElementById("phone1").value == "") {
+            alert("Enter team leader's phone no. !");
+            return false;
+
+        } else if(document.getElementById("inst1").value == "") {
+            alert("Enter team leader's institution !");
+            return false;
+        
+        } else if (document.getElementById("password").value.length < 8) {
+            alert("Password must be 8 characters long.");
+            return false;
+
+        } else if (document.getElementById("teamname").value.length > 25) {
+            alert("Team name can't more than 25 characters long !")
+            return false;
+            
+        }
+        return true;
+    }
+</script>
+
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Register
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+
+            {% include 'base/messages.html' %}
+
+            <h2 style="text-transform: uppercase; text-align: center; font-weight: 900;">Registration Form</h2>
+            <h4 style="text-align: center; padding-bottom: 30px;">Enter your team information in the form below</h4>
+
+            <form method="POST" action="/register" onsubmit="return checkFormSubmission();">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="teamname">Team Name</label><span class="required">*</span>
+                        <input type="text" class="form-control" id="teamname" name="teamname" aria-required="true">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label><span class="required">*</span>
+                        <input type="email" class="form-control" id="email" name="email" aria-required="true">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="password">Password</label><span class="required">*</span>
+                        <input type="password" class="form-control" id="password" name="password" aria-required="true">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="re-password">Confirm Password</label><span class="required">*</span>
+                        <input type="password" class="form-control" id="re-password" name="re-password"
+                            aria-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <br>
+                    <h4 style="font-weight: 800;">Team Leader</h4>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name1">Name</label><span class="required">*</span>
+                            <input type="text" class="form-control" id="name1" name="name1" aria-required="true">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone1">Contact Number</label><span class="required">*</span>
+                            <input type="text" class="form-control" id="phone1" name="phone1" aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inst1">Institute</label><span class="required">*</span>
+                        <input type="text" class="form-control" id="inst1" name="inst1" aria-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <br>
+                    <h4 style="font-weight: 800;">2nd Member</h4>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name2">Name</label>
+                            <input type="text" class="form-control" id="name2" name="name2">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone2">Contact Number</label>
+                            <input type="text" class="form-control" id="phone2" name="phone2">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inst2">Institute</label>
+                        <input type="text" class="form-control" id="inst2" name="inst2">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <br>
+                    <h4 style="font-weight: 800;">3rd Member</h4>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name3">Name</label>
+                            <input type="text" class="form-control" id="name3" name="name3">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone3">Contact Number</label>
+                            <input type="text" class="form-control" id="phone3" name="phone3">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inst3">Institute</label>
+                        <input type="text" class="form-control" id="inst3" name="inst3">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <br>
+                    <h4 style="font-weight: 800;">4th Member</h4>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name4">Name</label>
+                            <input type="text" class="form-control" id="name4" name="name4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone4">Contact Number</label>
+                            <input type="text" class="form-control" id="phone4" name="phone4">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inst4">Institute</label>
+                        <input type="text" class="form-control" id="inst4" name="inst4">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <br>
+                    <h4 style="font-weight: 800;">5th Member</h4>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name5">Name</label>
+                            <input type="text" class="form-control" id="name5" name="name5">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone5">Contact Number</label>
+                            <input type="text" class="form-control" id="phone5" name="phone5">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inst5">Institute</label>
+                        <input type="text" class="form-control" id="inst5" name="inst5">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

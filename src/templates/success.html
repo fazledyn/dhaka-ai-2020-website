@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Success - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Success
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+
+        <div class="container">
+            
+            {% include 'base/messages.html' %}
+
+            <div style="margin: auto;">
+                <h1 class="mb-3 bread">Success {{ value }} !</h1>
+                <form action="/dashboard" method="GET">
+                    <button class="btn btn-warning">Return to dashboard</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

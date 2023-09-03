@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Upload - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+</head>
+
+<script type="text/javascript">
+
+    function checkextension() {
+        var file = document.querySelector("#file");
+        if (/\.(csv)$/i.test(file.files[0].name) === false) {
+            alert("Not a CSV file! Upload a CSV file.");
+            document.querySelector("#file").value = ""
+        }
+    }
+
+    function checkFileSelected() {
+        if(document.getElementById("file").value == "") {
+            alert("No file selected. Please select a file !");
+            document.querySelector("#file").value = "";
+            return false;
+        }
+        return true;
+    }
+    
+</script>
+
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Upload
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+
+            {% include 'base/messages.html' %}
+
+            <h2 style="text-transform: uppercase; text-align: center; font-weight: 900;">Upload your file here</h2>
+
+            <div style="width: 600px; margin: auto;">
+                <form action="/uploaded" method="POST" enctype="multipart/form-data" onsubmit="return checkFileSelected();">
+                    <div class="row" style="position: relative; padding: 30px;">
+                        <div style="margin: auto;">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                            <input type="file" id="file" name="file" onchange="checkextension()">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+                
+                <h2 style="text-transform: uppercase; text-align: center; font-weight: 900; padding: 30px;">Submission Format</h2>
+
+                <div class="container" style="display: flex; justify-content: center; width: 600px;">
+                    <embed src="{{ url_for('static', filename='files/dhaka-ai-submission-format.pdf') }}" type="application/pdf" style="width: 600px; height: 750px;  margin: auto;">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

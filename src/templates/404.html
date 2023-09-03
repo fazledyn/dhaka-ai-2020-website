@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Not found - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'base/navbar.html' %}
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    404 Not Found
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section ftco-portfolio bg-light">
+        <div class="container">
+            Looks like you're lost. This page doesn't exist.
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

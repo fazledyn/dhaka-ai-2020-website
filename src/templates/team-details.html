@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Team Details - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Team Details
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+
+        <div class="container">
+            
+            {% include 'base/messages.html' %}
+
+            {% if user_type == 'admin'%}
+
+                <h2 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                    Team Details
+                </h2>
+
+                <table class="table"
+                    style="border-collapse: collapse; border-radius: 7px 7px 7px 7px; overflow: hidden; background-color: whitesmoke;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Team Name</th>
+                            <th>Email</th>
+                            <th>Email Verified ?</th>
+                        </tr>
+                    </thead>
+                    {% for row in team_info %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>
+                                {% if row[2]==1 %}
+                                    YES
+                                {% else %}
+                                    NO
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+
+                <br><br>
+                <h3 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                    Participants Details
+                </h3>
+
+                <table class="table"
+                    style="border-collapse: collapse; border-radius: 7px 7px 7px 7px; overflow: hidden; background-color: whitesmoke;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Institute</th>
+                        </tr>
+                    </thead>
+                    {% for row in member_info %}
+                        <tr>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+
+            {% endif %}
+
+            <br><br>
+
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

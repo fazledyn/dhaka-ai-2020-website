@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+      <title>Posters - Dhaka AI 2020</title>
+      {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+      <!-- Navbar -->
+      {% include 'base/navbar.html' %}
+      <div
+            style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+            <div class="container">
+                  <div class="text" style="width: 400px;">
+                        <h3
+                              style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                              Posters
+                        </h3>
+                  </div>
+            </div>
+      </div>
+
+      <section class="ftco-section ftco-portfolio bg-light">
+            <div class="container">
+                  <div class="row no-gutters">
+                        <div class="col-md-12 portfolio-wrap mt-0">
+                              <div class="row no-gutters align-items-center">
+                                    <div>
+                                          <h3 style="font-weight: bold;">Top 8 Team (Alphabetically):</h3>
+                                          <ul>
+
+                                                <li><a href="{{ url_for('static', filename='files/posters/mirage.pdf') }}" target="_blank">Mirage</a></li>
+                                                <li><a href="{{ url_for('static', filename='files/posters/one_man_army.pdf') }}" target="_blank">One Man Army</a></li>
+                                                <li><a href="{{ url_for('static', filename='files/posters/passphrase.pdf') }}" target="_blank">Passphrase</a></li>
+                                                <li><a href="{{ url_for('static', filename='files/posters/perceptron.pdf') }}" target="_blank">Perceptron</a></li>
+                                          
+                                                <li><a href="{{ url_for('static', filename='files/posters/rtx4090.pdf') }}" target="_blank">RTX 4090</a></li>
+                                                <li><a href="{{ url_for('static', filename='files/posters/shai.pdf') }}" target="_blank">Shai</a></li>
+                                                <li><a href="{{ url_for('static', filename='files/posters/the_implementors.pdf') }}" target="_blank">The Implementors</a></li>
+                                                <li><a href="{{ url_for('static', filename='files/posters/traffic_zero.pdf') }}" target="_blank">Traffic Zero</a></li>
+
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+            </div>
+      </section>
+
+      {% include 'base/footer.html' %}
+
+</body>
+
+</html>

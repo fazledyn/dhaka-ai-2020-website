@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>DhakaAI 2020</title>
+    {% include 'base/assets.html' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%;">
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center">
+
+                <div class="text" style="width: 400px; margin-right: 90px;">
+                    <h3
+                        style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900;position: relative;">
+                        We are introducing AI in Dhaka Traffic System
+                    </h3>
+                    <p style="padding-top: 5px;">
+                        For the first time in Bangladesh, an international AI-based Dhaka Traffic Detection
+                        Challenge funded by Elsevier would be co-organized during STI 2020
+                    </p>
+                    <p class="mb-0">
+                        <a href="/register" class="btn btn-primary">
+                            Register
+                        </a>
+                        <a href="https://fb.me/e/1xIJM4sos" target="_blank" class="btn btn-success">
+                            Talk with DhakaAI
+                        </a>
+                    </p>
+                </div>
+                
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/iJzoabCMuQM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <section class="ftco-section ftco-portfolio bg-light">
+        <div class="container">
+            <div class="row no-gutters">
+
+                <div class="col-md-12 portfolio-wrap mt-0">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-7">
+                            <div class="desc">
+                                <div class="top">
+                                    <h1 class="mb-2">Why this new</h1>
+                                    <h3 class="mb-2"><a href="#">AI-Based Dhaka Traffic Detection Challenge?</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:flow-root; align-items: initial;">
+                            <p>
+                                The capital city of Dhaka has only 7% traffic roads (compared to 25% urban standard)
+                                in
+                                presence of approximately 8 million commuters a day within 306 sq km area. The
+                                scenario of
+                                Dhaka traffic is unique which poses complex new challenges in terms of automated
+                                traffic
+                                detection. To solve the problem using advances in AI-based technology and ICT
+                                solutions, we
+                                are calling for solutions to automatic Dhaka traffic detection problems on optical
+                                images.
+                                This new AI-Based Dhaka Traffic Detection Challenge aims at assessing the ability of
+                                state-of-the-art methods to detect and recognize traffic vehicles. This solution is
+                                encountered in modern cities where multiple cultures live and communicate together,
+                                where
+                                users see various scripts and languages in a way that prevents using much a priori
+                                knowledge. Also, at the same time, academics and researchers from the region who are
+                                experts
+                                in AI or interested in exploring possibilities could be brought to a networking
+                                community
+                                through this campaign. Working together on a common problem statement can create the
+                                right
+                                synergies needed to build an AI-based community in South-East Asia.
+                            </p>
+                            <div>
+                                <img src="{{ url_for('static', filename='images/traffic.jpg') }}"
+                                style="width: 450px; height: auto; margin: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 portfolio-wrap">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-7">
+                            <div class="desc">
+                                <div class="top">
+                                    <h1 class="mb-2">What is</h1>
+                                    <h3 class="mb-2"><a href="#">this challenge?</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <p>The competition will happen online and within 2 rounds. In the first round, a training
+                            dataset would be provided with which the participants need to train a generalized object
+                            detection model to locate traffic vehicles and identify them on the 1st test dataset and
+                            generate a submission file following the prescribed format. Based only on the detection
+                            accuracy, the top 30% team will move to the 2nd round where they will be evaluated based on
+                            the
+                            detection accuracy on the 2nd test dataset, poster, presentation, and codes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 portfolio-wrap mt-0">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-7">
+                            <div class="desc">
+                                <div class="top">
+                                    <h1 class="mb-2">Dataset</h1>
+                                    <h3 class="mb-2"><a href="#">description</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="margin-top: -150px;">
+                            <img src="{{ url_for('static', filename='images/dataset-top.jpg') }}"
+                                style="width: 760px; height: auto;" align="right">
+                        </div>
+
+
+                        <div style="width: 640px;">
+                            <p>
+                                The dataset is composed of vehicle images, where an image contains a vehicle of one or
+                                more of 21 different classes of vehicle. This makes the dataset useful for multiple
+                                vehicle detection and recognition. The considered vehicle classes are: ambulance,
+                                auto-rickshaw, bicycle, bus, car, garbage van, human hauler, minibus, minivan,
+                                motorbike, Pickup, army vehicle, police car, rickshaw, scooter, Suv, taxi,
+                                three-wheelers (CNG), truck, van, wheelbarrow.
+                            </p>
+                            Dataset also available in
+                            <a href="https://www.kaggle.com/rifat963/dhakaai-dhaka-based-traffic-detection-dataset" target="_blank">
+                                Kaggle
+                            </a>
+                        </div>
+
+                        <div>
+                            <img src="{{ url_for('static', filename='images/dataset-bottom.jpg') }}"
+                                style="width: 760px; height: auto;" align="right">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 portfolio-wrap">
+                    <h1 class="mb-2" style="text-align: left; padding-bottom: 20px;">Our Sponsors</h1>
+                    <div style="display: flex; justify-content: space-around;">
+                        <div>
+                            <a href="https://site.ieee.org/bangladesh-cs/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/ieee-cs.png') }}" style="height: 100px;">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://eee.green.edu.bd/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/gub.png') }}" style="height: 100px;">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.journals.elsevier.com/artificial-intelligence" target="_blank">
+                                <img src="{{ url_for('static', filename='images/elsevier.png') }}" style="height: 100px;">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://fse.green.edu.bd/sti-2020/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/sti.jpg') }}" style="height: 100px;">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/graphicobd/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/graphico.png') }}" style="height: 60px; margin-top: 20px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 portfolio-wrap">
+                    <h1 class="mb-2" style="text-align: left; padding-bottom: 10px;">
+                        Registered Teams: {{ total_team }}
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>

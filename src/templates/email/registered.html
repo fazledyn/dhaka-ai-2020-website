@@ -1,0 +1,28 @@
+{% extends 'email/base.html' %}
+
+{% block title %}
+    Registration Successful
+{% endblock %}
+
+{% block heading %}
+    <h2>Registration Successful</h2>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Congratulations, {{ teamname }}. You have been successfully registered for <b>Dhaka AI 2020 Contest.</b>
+        <br>
+        Your username and password are as followed:
+    </p>
+
+    <b>Username: </b>{{ teamname }}<br>
+    <b>Password: </b>{{ password }}
+
+    <p>
+        In order to login, you must click this <a href="https://dhaka-ai.com/email-verification/{{ email_token }}" target="_blank">link</a>
+        to confirm your email.
+        <br>
+        After confirmation, our organizers will review and approve your team. You will also get another email if your team is
+        approved. Then you can login into our website.
+    </p>
+{% endblock %}

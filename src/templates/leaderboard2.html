@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Leaderboard - Dhaka AI 2020</title>
+    {% include 'base/assets.html' %}
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'base/navbar.html' %}
+
+    <div
+        style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }}); background-size: cover; background-position: 50% 50%; height: 400px;">
+        <div class="container">
+            <div class="text" style="width: 400px;">
+                <h3
+                    style="font-size: 40px; text-transform: uppercase; color: rgb(255, 255, 255);line-height: 1.1;font-weight: 900; margin: auto; padding-top: 200px;">
+                    Leaderboard (Round 2)
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section ftco-portfolio bg-light">
+        <div class="container">
+
+            {% include 'base/messages.html' %}
+
+            <h1 style="text-align: center; padding-bottom: 20px; font-weight: 700;">
+                Current Standings
+            </h1>
+
+            <h5 style="text-align: center; padding-bottom: 20px; font-weight: 600;">
+                The 1st round leaderboard can be found <a href="{{ url_for('leaderboard') }}">here.</a>
+            </h5>
+
+            <table class="table"
+                style="border-collapse: collapse; border-radius: 7px 7px 7px 7px; overflow: hidden;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Position</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Accuracy</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in result %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ r[0] }}</td>
+                        <td>{{ r[1] }}</td>
+                        <td>{{ r[3] }}</td>
+                        <td>{{ r[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+    </section>
+
+    {% include 'base/footer.html' %}
+
+</body>
+
+</html>
